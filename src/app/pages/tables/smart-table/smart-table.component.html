@@ -1,0 +1,30 @@
+<nb-card>
+  <nb-card-header>
+    Personaje
+  </nb-card-header>
+
+  
+    <nb-card-body>
+      <div class="col-lg-12">
+        <nb-card>
+          <nb-card-header>Busqueda</nb-card-header>
+          <nb-card-body>
+            <form [formGroup]="firstForm">
+              <div class="row">
+                <div class="col-md-10">
+                  
+                  <input type="text" nbInput fullWidth placeholder="Personaje" formControlName="Personaje">
+                </div>
+                <div class="col-md-2"> 
+                  
+                  <nb-icon  style="cursor: pointer;" class="action-icon" icon="search-outline" (click)="ngSubmit()"></nb-icon>
+                </div>
+              </div>      
+            </form>
+          </nb-card-body>
+        </nb-card>
+      </div>
+      <ng2-smart-table [settings]="settings" [source]="source">
+      </ng2-smart-table>
+    </nb-card-body>
+</nb-card>
